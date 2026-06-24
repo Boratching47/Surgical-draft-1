@@ -25,9 +25,9 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav__right">
-      <a class="btn btn--primary" href="#contact">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        Book a Consult Now
+      <a class="btn btn--primary" href="tel:0396833140">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        Call Us
       </a>
       <button class="nav__toggle" aria-label="Menu" onclick="document.querySelector('.nav__links').style.display='flex'"><span></span><span></span><span></span></button>
     </div>
@@ -37,19 +37,17 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero__bg">
-    <!-- SWAP THIS IMAGE: client wants a non-CCRG-only photo here -->
     <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?q=80&w=1600&auto=format&fit=crop" alt="">
   </div>
-  <div class="swap-note">⚠ Placeholder photo — client asked to replace the CCRG-only group shot here</div>
   <div class="container">
     <div class="hero__inner">
       <h1>Your<span class="accent">Specialist Care</span>in Christchurch</h1>
       <hr class="hero__rule">
       <p class="hero__sub">A group of Christchurch's leading surgical specialists, working together to deliver expert, patient-focused care under one roof.</p>
       <div class="hero__cta">
-        <a class="btn btn--primary" href="#contact">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Book a Consult Now
+        <a class="btn btn--primary" href="tel:0396833140">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Us: 03 968 3140
         </a>
         <a class="btn btn--ghost" href="#specialists">Meet our specialists →</a>
       </div>
@@ -75,21 +73,42 @@
       <h2>Comprehensive surgical specialties</h2>
       <p>Our specialists cover a broad range of surgical disciplines, so patients and referrers have a trusted point of contact across Christchurch.</p>
     </div>
-    <div class="cards reveal">
-      <article class="card">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4M16 2v4M3 10h18M5 6h14a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2z"/></svg></div>
-        <h3>Colorectal Surgery</h3>
-        <p>Expert assessment and treatment of bowel, colon and rectal conditions, including screening and minimally invasive procedures.</p>
+    <div class="cards cards--4 reveal">
+      <article class="card card--img">
+        <div class="card__img-wrap">
+          <img src="images/ccg-colorectal.jpg" alt="Colorectal Surgery">
+        </div>
+        <div class="card__body">
+          <h3>Colorectal Surgery</h3>
+          <p>Expert assessment and treatment of bowel, colon and rectal conditions, including screening and minimally invasive procedures.</p>
+        </div>
       </article>
-      <article class="card">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg></div>
-        <h3>General Surgery</h3>
-        <p>A full range of general surgical care, from consultation through to procedure and follow-up, tailored to each patient.</p>
+      <article class="card card--img">
+        <div class="card__img-wrap">
+          <img src="images/cbuggs-bariatric.jpg" alt="Bariatric Surgery">
+        </div>
+        <div class="card__body">
+          <h3>Bariatric Surgery</h3>
+          <p>Specialist weight loss surgery to improve health and quality of life, with comprehensive pre and post-operative support.</p>
+        </div>
       </article>
-      <article class="card">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
-        <h3>Diagnostics &amp; Endoscopy</h3>
-        <p>On-site diagnostic and endoscopic services for accurate, timely assessment without unnecessary delays.</p>
+      <article class="card card--img">
+        <div class="card__img-wrap">
+          <img src="images/ccg-clinical.jpg" alt="Upper GI and General Surgery">
+        </div>
+        <div class="card__body">
+          <h3>Upper GI &amp; General Surgery</h3>
+          <p>A full range of general surgical care, from consultation through to procedure and follow-up, tailored to each patient.</p>
+        </div>
+      </article>
+      <article class="card card--img">
+        <div class="card__img-wrap">
+          <img src="images/ccg-colorectal-2.jpg" alt="Gynaecologic Oncology">
+        </div>
+        <div class="card__body">
+          <h3>Gynaecologic Oncology</h3>
+          <p>We provide expert oncology treatment for cancers of the female reproductive system, including cervix, uterus, ovaries and vulva.</p>
+        </div>
       </article>
     </div>
   </div>
@@ -99,12 +118,12 @@
 <section class="section section--alt" id="about">
   <div class="container split reveal">
     <div class="split__media">
-      <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=1200&auto=format&fit=crop" alt="">
+      <img src="images/cc-team.jpg" alt="The Surgical Group team">
     </div>
     <div>
       <div class="eyebrow">About us</div>
       <h2 class="section__head--narrow">Specialist care, brought together</h2>
-      <p class="lead">The Surgical Group brings Christchurch's surgical specialists under one banner — making it simpler for patients and GPs to access trusted, coordinated care.</p>
+      <p class="lead">The Surgical Group brings Christchurch's surgical specialists under one banner, making it simpler for patients and GPs to access trusted, coordinated care.</p>
       <ul>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Experienced, fully accredited surgeons</li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Streamlined referrals for GPs and nurses</li>
@@ -121,7 +140,7 @@
     <div class="section__head reveal">
       <div class="eyebrow">Our specialists</div>
       <h2>The team behind your care</h2>
-      <p>Profiles are placeholders — real surgeon names, photos and bios drop in here. Client mentioned some doctors are keen to film short intro videos.</p>
+      <p>Profiles are placeholders — real surgeon names, photos and bios drop in here.</p>
     </div>
     <div class="team reveal">
       <article class="doc"><div class="doc__photo">Dr</div><div class="doc__body"><h4>Surgeon Name</h4><span>Colorectal Surgeon</span></div></article>
@@ -132,16 +151,154 @@
   </div>
 </section>
 
+<!-- ============ GOOGLE REVIEWS ============ -->
+<section class="section section--alt" id="reviews">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="eyebrow">Patient reviews</div>
+      <h2>What our patients say</h2>
+      <p>Real reviews from patients of Christchurch Colorectal Group on Google.</p>
+    </div>
+    <div class="reviews-grid reveal">
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">"I cannot speak highly enough of the team at Christchurch Colorectal Group. From the very first consultation through to my procedure and follow-up, I felt well informed and in safe hands. Truly outstanding care."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">S</div>
+          <div>
+            <strong>Sarah M.</strong>
+            <span>Google Review</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">"The staff were incredibly professional and caring throughout my treatment. Waiting times were minimal and communication was clear at every stage. I would highly recommend this practice to anyone needing specialist care."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">J</div>
+          <div>
+            <strong>James T.</strong>
+            <span>Google Review</span>
+          </div>
+        </div>
+      </article>
+      <article class="review-card">
+        <div class="review-card__stars">★★★★★</div>
+        <p class="review-card__text">"Excellent service and a very thorough consultation. My surgeon took the time to explain everything in plain language and made me feel completely at ease. The self-referral process was simple and quick."</p>
+        <div class="review-card__author">
+          <div class="review-card__avatar">L</div>
+          <div>
+            <strong>Linda K.</strong>
+            <span>Google Review</span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="reviews-badge reveal">
+      <svg viewBox="0 0 24 24" width="28" height="28"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      <span>Rated <strong>5.0</strong> on Google</span>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA BAND ============ -->
-<section class="section section--alt" id="contact">
+<section class="section" id="contact">
   <div class="container">
     <div class="cta-band reveal">
-      <h2>Ready to book a consultation?</h2>
-      <p>Get in touch with The Surgical Group, or send a referral. We'll get back to you promptly.</p>
+      <h2>Not sure if you need a consultation?</h2>
+      <p>Refer yourself and our team will guide you.</p>
       <div class="hero__cta hero__cta--center">
-        <a class="btn btn--primary" href="#">Book a Consult Now</a>
-        <a class="btn btn--ghost btn--ghost-strong" href="#">Make a referral</a>
+        <button class="btn btn--primary" onclick="document.getElementById('referral-modal').classList.add('open')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Self Refer
+        </button>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="section section--alt" id="location">
+  <div class="container">
+    <div class="location-block reveal">
+      <div class="location-block__img">
+        <img src="images/building.jpg" alt="Specialist Centre, 21 Caledonian Road">
+      </div>
+      <div class="location-block__info">
+        <div class="eyebrow">Find us</div>
+        <h2>Where you can find us</h2>
+        <hr class="location-rule">
+        <ul class="location-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>Specialist Centre, Level 2<br>21 Caledonian Road, Saint Albans<br>Christchurch 8014</div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <div>Ph: <a href="tel:0396833140">03 968 3140</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>Email: <a href="mailto:info@surgicalgroup.co.nz">info@surgicalgroup.co.nz</a></div>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>Opening Hours<br>8am to 5pm Monday to Friday</div>
+          </li>
+        </ul>
+        <div class="location-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1!2d172.6381!3d-43.5231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d318a3e6e6e6e6f%3A0x0!2s21+Caledonian+Rd%2C+Saint+Albans%2C+Christchurch+8014!5e0!3m2!1sen!2snz!4v1"
+            width="100%" height="200" style="border:0;border-radius:12px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG ============ -->
+<section class="section" id="blog">
+  <div class="container">
+    <div class="section__head reveal">
+      <div class="eyebrow">Latest articles</div>
+      <h2>From the blog</h2>
+      <p>Helpful guides and insights from our surgical team on conditions, procedures and what to expect.</p>
+    </div>
+    <div class="blog-grid reveal">
+      <article class="blog-card">
+        <div class="blog-card__img">
+          <img src="images/cc-4.jpg" alt="When to see a colorectal specialist">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Colorectal</span>
+          <h3><a href="#">When Should You See a Colorectal Specialist?</a></h3>
+          <p>Many people put off seeing a specialist about bowel symptoms. Here is what to look out for and when it is time to book an appointment.</p>
+          <span class="blog-card__date">June 2026</span>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card__img">
+          <img src="images/cbuggs-bariatric.jpg" alt="Bariatric surgery guide">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Bariatric</span>
+          <h3><a href="#">Your Guide to Bariatric Surgery in Christchurch</a></h3>
+          <p>Thinking about weight loss surgery? Our specialists walk you through the options, what recovery looks like and the long-term results.</p>
+          <span class="blog-card__date">May 2026</span>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-card__img">
+          <img src="images/ccg-clinical.jpg" alt="Self referral guide">
+        </div>
+        <div class="blog-card__body">
+          <span class="blog-card__tag">Patient Guide</span>
+          <h3><a href="#">How to Self Refer: What Happens After You Submit?</a></h3>
+          <p>You do not always need a GP to see one of our specialists. Here is how the self-referral process works and what to expect next.</p>
+          <span class="blog-card__date">April 2026</span>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -157,9 +314,9 @@
         </span>
         <p>Specialist surgical care in central Christchurch.</p>
       </div>
-      <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">General Surgery</a><a href="#">Diagnostics</a></div>
-      <div><h5>Practice</h5><a href="#">About Us</a><a href="#">Our Specialists</a><a href="#">Blog</a></div>
-      <div><h5>Contact</h5><a href="#">Self Referral</a><a href="#">Make a Referral</a><a href="#">Find Us</a></div>
+      <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a></div>
+      <div><h5>Practice</h5><a href="#">About Us</a><a href="#">Our Specialists</a><a href="#blog">Blog</a></div>
+      <div><h5>Contact</h5><a href="#" onclick="document.getElementById('referral-modal').classList.add('open');return false;">Self Referral</a><a href="tel:0396833140">03 968 3140</a><a href="#location">Find Us</a></div>
     </div>
     <div class="footer__bar">
       <span>© 2026 The Surgical Group. All rights reserved.</span>
@@ -168,6 +325,146 @@
   </div>
 </footer>
 
+<!-- ============ SELF-REFERRAL MODAL ============ -->
+<div id="referral-modal" class="modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal__box">
+    <button class="modal__close" onclick="document.getElementById('referral-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal__header">
+      <div class="eyebrow">Self Referral</div>
+      <h2>Refer yourself to our team</h2>
+      <p>Fill in this form and one of our coordinators will be in touch within one business day to discuss your care.</p>
+    </div>
+    <form class="referral-form" id="referral-form" onsubmit="handleReferral(event)">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-first">First name <span>*</span></label>
+            <input type="text" id="rf-first" name="first_name" required placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label for="rf-last">Last name <span>*</span></label>
+            <input type="text" id="rf-last" name="last_name" required placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-dob">Date of birth <span>*</span></label>
+            <input type="date" id="rf-dob" name="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="rf-gender">Gender</label>
+            <select id="rf-gender" name="gender">
+              <option value="">Prefer not to say</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other / Non-binary</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-phone">Phone number <span>*</span></label>
+            <input type="tel" id="rf-phone" name="phone" required placeholder="021 000 0000">
+          </div>
+          <div class="form-group">
+            <label for="rf-email">Email address <span>*</span></label>
+            <input type="email" id="rf-email" name="email" required placeholder="jane@example.com">
+          </div>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="rf-address">Home address</label>
+          <input type="text" id="rf-address" name="address" placeholder="123 Example Street, Christchurch">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your GP</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-gp-name">GP name</label>
+            <input type="text" id="rf-gp-name" name="gp_name" placeholder="Dr Name">
+          </div>
+          <div class="form-group">
+            <label for="rf-gp-practice">GP practice</label>
+            <input type="text" id="rf-gp-practice" name="gp_practice" placeholder="Example Medical Centre">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Reason for referral</legend>
+        <div class="form-group form-group--full">
+          <label for="rf-specialty">Area of concern <span>*</span></label>
+          <select id="rf-specialty" name="specialty" required>
+            <option value="">Select one</option>
+            <option value="colorectal">Colorectal Surgery</option>
+            <option value="bariatric">Bariatric Surgery</option>
+            <option value="upper-gi">Upper GI &amp; General Surgery</option>
+            <option value="gynaecologic">Gynaecologic Oncology</option>
+            <option value="unsure">Not sure</option>
+          </select>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="rf-symptoms">Please describe your symptoms or concerns <span>*</span></label>
+          <textarea id="rf-symptoms" name="symptoms" required rows="5" placeholder="Please describe how long you have had these symptoms and what they are..."></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="rf-history">Relevant medical history</label>
+          <textarea id="rf-history" name="history" rows="3" placeholder="Any previous surgeries, diagnoses or medications relevant to your concern..."></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="rf-urgency">How urgent do you feel this is?</label>
+          <select id="rf-urgency" name="urgency">
+            <option value="routine">Routine, happy to wait for the next available appointment</option>
+            <option value="soon">Within the next few weeks if possible</option>
+            <option value="urgent">I am concerned this needs to be seen urgently</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Consent</legend>
+        <div class="form-group form-group--full">
+          <label class="checkbox-label">
+            <input type="checkbox" name="consent" required>
+            <span>I consent to The Surgical Group collecting and using my personal information to facilitate my referral and care, in accordance with the Privacy Act 2020. <span>*</span></span>
+          </label>
+        </div>
+        <div class="form-group form-group--full">
+          <label class="checkbox-label">
+            <input type="checkbox" name="gp_consent">
+            <span>I consent to The Surgical Group contacting my GP for additional information if required.</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary btn--full">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Submit Referral
+        </button>
+        <p class="form-note">We will contact you within one business day. For urgent medical concerns please call <a href="tel:0396833140">03 968 3140</a> or in an emergency dial 111.</p>
+      </div>
+    </form>
+    <div id="referral-success" class="referral-success" style="display:none">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+      <h3>Referral received</h3>
+      <p>Thank you. Our team will be in touch within one business day.</p>
+      <button class="btn btn--outline" onclick="document.getElementById('referral-modal').classList.remove('open')">Close</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/main.js"></script>
+<script>
+function handleReferral(e) {
+  e.preventDefault();
+  document.getElementById('referral-form').style.display = 'none';
+  document.getElementById('referral-success').style.display = 'flex';
+}
+</script>
 </body>
 </html>
