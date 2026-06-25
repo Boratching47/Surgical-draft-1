@@ -60,7 +60,8 @@ img{max-width:100%;display:block;}
 /* ---------- hero ---------- */
 .hero{position:relative;color:#fff;overflow:hidden;background:var(--navy-900);}
 .hero__bg{position:absolute;inset:0;z-index:0;}
-.hero__bg img{width:100%;height:100%;object-fit:cover;opacity:.55;}
+.hero__bg img{width:100%;height:100%;object-fit:cover;opacity:0;position:absolute;inset:0;transition:opacity 1.2s ease;}
+.hero__bg img.active{opacity:.55;}
 .hero__bg::after{
   content:"";position:absolute;inset:0;
   background:linear-gradient(105deg,var(--navy-900) 28%,rgba(15,33,71,.85) 50%,rgba(10,23,51,.35) 100%);
