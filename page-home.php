@@ -2,7 +2,6 @@
 /*
 Template Name: Home Page Template
 */
-$tdir = get_template_directory_uri();
 ?><!doctype html>
 <html lang="en-NZ">
 <head>
@@ -173,7 +172,7 @@ img{max-width:100%;display:block;}
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="/">
-      <img class="brand__mark" src="<?php echo $tdir; ?>/images/tsg-logo-white.png" alt="The Surgical Group">
+      <img class="brand__mark" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/tsg-logo-white.png" alt="The Surgical Group">
       The Surgical Group
     </a>
     <ul class="nav__links">
@@ -190,11 +189,11 @@ img{max-width:100%;display:block;}
 
 <section class="hero">
   <div class="hero__bg" id="hero-bg">
-    <img class="hero-slide active" src="<?php echo $tdir; ?>/images/ccg-colorectal.jpg" alt="">
-    <img class="hero-slide" src="<?php echo $tdir; ?>/images/ccg-clinical.jpg" alt="">
-    <img class="hero-slide" src="<?php echo $tdir; ?>/images/cbuggs-bariatric.jpg" alt="">
-    <img class="hero-slide" src="<?php echo $tdir; ?>/images/cc-4.jpg" alt="">
-    <img class="hero-slide" src="<?php echo $tdir; ?>/images/building.jpg" alt="">
+    <img class="hero-slide active" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-clinical.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cc-4.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="">
   </div>
   <div class="container">
     <div class="hero__inner">
@@ -229,19 +228,19 @@ img{max-width:100%;display:block;}
     </div>
     <div class="cards cards--4 reveal">
       <article class="card card--img">
-        <div class="card__img-wrap"><img src="<?php echo $tdir; ?>/images/ccg-colorectal.jpg" alt="Colorectal Surgery"></div>
+        <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal.jpg" alt="Colorectal Surgery"></div>
         <div class="card__body"><h3>Colorectal Surgery</h3><p>Expert assessment and treatment of bowel, colon and rectal conditions, including screening and minimally invasive procedures.</p></div>
       </article>
       <article class="card card--img">
-        <div class="card__img-wrap"><img src="<?php echo $tdir; ?>/images/cbuggs-bariatric.jpg" alt="Bariatric Surgery"></div>
+        <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="Bariatric Surgery"></div>
         <div class="card__body"><h3>Bariatric Surgery</h3><p>Specialist weight loss surgery to improve health and quality of life, with comprehensive pre and post operative support.</p></div>
       </article>
       <article class="card card--img">
-        <div class="card__img-wrap"><img src="<?php echo $tdir; ?>/images/ccg-clinical.jpg" alt="Upper GI and General Surgery"></div>
+        <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-clinical.jpg" alt="Upper GI and General Surgery"></div>
         <div class="card__body"><h3>Upper GI &amp; General Surgery</h3><p>A full range of general surgical care, from consultation through to procedure and follow up, tailored to each patient.</p></div>
       </article>
       <article class="card card--img">
-        <div class="card__img-wrap"><img src="<?php echo $tdir; ?>/images/ccg-colorectal-2.jpg" alt="Gynaecologic Oncology"></div>
+        <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal-2.jpg" alt="Gynaecologic Oncology"></div>
         <div class="card__body"><h3>Gynaecologic Oncology</h3><p>We provide expert oncology treatment for cancers of the female reproductive system, including cervix, uterus, ovaries and vulva.</p></div>
       </article>
     </div>
@@ -251,7 +250,7 @@ img{max-width:100%;display:block;}
 <section class="section section--alt" id="about">
   <div class="container split reveal">
     <div class="split__media">
-      <img src="<?php echo $tdir; ?>/images/building.jpg" alt="The Surgical Group">
+      <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="The Surgical Group">
     </div>
     <div>
       <div class="eyebrow">About us</div>
@@ -340,7 +339,7 @@ img{max-width:100%;display:block;}
   <div class="container">
     <div class="location-block reveal">
       <div class="location-block__img">
-        <img src="<?php echo $tdir; ?>/images/building.jpg" alt="Specialist Centre, 21 Caledonian Road">
+        <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="Specialist Centre, 21 Caledonian Road">
       </div>
       <div class="location-block__info">
         <div class="eyebrow">Find us</div>
@@ -369,15 +368,15 @@ img{max-width:100%;display:block;}
     </div>
     <div class="blog-grid reveal">
       <article class="blog-card">
-        <div class="blog-card__img"><img src="<?php echo $tdir; ?>/images/cc-4.jpg" alt="When to see a colorectal specialist"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cc-4.jpg" alt="When to see a colorectal specialist"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Colorectal</span><h3><a href="#">When Should You See a Colorectal Specialist?</a></h3><p>Many people put off seeing a specialist about bowel symptoms. Here is what to look out for and when it is time to book an appointment.</p><span class="blog-card__date">June 2026</span></div>
       </article>
       <article class="blog-card">
-        <div class="blog-card__img"><img src="<?php echo $tdir; ?>/images/cbuggs-bariatric.jpg" alt="Bariatric surgery guide"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="Bariatric surgery guide"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Bariatric</span><h3><a href="#">Your Guide to Bariatric Surgery in Christchurch</a></h3><p>Thinking about weight loss surgery? Our specialists walk you through the options, what recovery looks like and the long term results.</p><span class="blog-card__date">May 2026</span></div>
       </article>
       <article class="blog-card">
-        <div class="blog-card__img"><img src="<?php echo $tdir; ?>/images/ccg-clinical.jpg" alt="Self referral guide"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-clinical.jpg" alt="Self referral guide"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Patient Guide</span><h3><a href="#">How to Self Refer: What Happens After You Submit?</a></h3><p>You do not always need a GP to see one of our specialists. Here is how the self referral process works and what to expect next.</p><span class="blog-card__date">April 2026</span></div>
       </article>
     </div>
@@ -388,7 +387,7 @@ img{max-width:100%;display:block;}
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <span class="brand"><img class="brand__mark" src="<?php echo $tdir; ?>/images/tsg-logo-white.png" alt="The Surgical Group">The Surgical Group</span>
+        <span class="brand"><img class="brand__mark" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/tsg-logo-white.png" alt="The Surgical Group">The Surgical Group</span>
         <p>Specialist surgical care in central Christchurch.</p>
       </div>
       <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a></div>
