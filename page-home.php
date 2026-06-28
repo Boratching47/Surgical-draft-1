@@ -11,6 +11,7 @@ $tdir = get_template_directory_uri();
 <title>The Surgical Group &mdash; Specialist Care in Christchurch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<?php wp_head(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -182,10 +183,6 @@ img{max-width:100%;display:block;}
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav__right">
-      <a class="btn btn--primary" href="tel:0396833140">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        Call Us
-      </a>
       <button class="nav__toggle" aria-label="Menu" onclick="document.querySelector('.nav__links').style.display='flex'"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -330,10 +327,10 @@ img{max-width:100%;display:block;}
       <h2>Not sure if you need a consultation?</h2>
       <p>Refer yourself and our team will guide you.</p>
       <div class="hero__cta hero__cta--center">
-        <a class="btn btn--primary" href="https://docs.google.com/forms/d/e/1FAIpQLScNj9e_nMqsdYuTmP872JaveLH36FamTQNBpiheUnb_NgB0-Q/viewform?usp=publish-editor" target="_blank" rel="noopener">
+        <button class="btn btn--primary" onclick="document.getElementById('referral-modal').classList.add('open')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           Self Refer
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -416,35 +413,25 @@ img{max-width:100%;display:block;}
       <h2>Make An Enquiry</h2>
       <p>Fill in your details and a member of our team will be in touch with you shortly.</p>
     </div>
-    <form class="referral-form" id="enquiry-form" onsubmit="handleEnquiry(event)">
-      <div class="form-group form-group--full">
-        <label for="eq-name">Full Name <span>*</span></label>
-        <input type="text" id="eq-name" name="full_name" required placeholder="Jane Smith">
-      </div>
-      <div class="form-group form-group--full">
-        <label for="eq-email">Email <span>*</span></label>
-        <input type="email" id="eq-email" name="email" required placeholder="jane@example.com">
-      </div>
-      <div class="form-group form-group--full">
-        <label for="eq-phone">Phone Number <span>*</span></label>
-        <input type="tel" id="eq-phone" name="phone" required placeholder="021 000 0000">
-      </div>
-      <div class="form-group form-group--full">
-        <label for="eq-date">When would you like to schedule your appointment? <span>*</span></label>
-        <input type="text" id="eq-date" name="appointment" required placeholder="e.g. Weekday mornings, ASAP, early July…">
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="btn btn--primary btn--full">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-          Submit Enquiry
-        </button>
-      </div>
-    </form>
-    <div id="enquiry-success" class="referral-success" style="display:none">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
-      <h3>Thanks!</h3>
-      <p>A member of our team will be in touch with you shortly.</p>
-      <button class="btn btn--outline" onclick="document.getElementById('enquiry-modal').classList.remove('open')">Close</button>
+    <div style="padding:1.5rem 2.5rem 2.5rem;">
+      <?php echo do_shortcode('[wpforms id="ENQUIRY_FORM_ID"]'); ?>
+    </div>
+  </div>
+</div>
+
+<!-- SELF REFERRAL MODAL -->
+<div id="referral-modal" class="modal" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="modal__box">
+    <button class="modal__close" onclick="document.getElementById('referral-modal').classList.remove('open')" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal__header">
+      <div class="eyebrow">Self Referral</div>
+      <h2>Refer yourself to our team</h2>
+      <p>Fill in this form and one of our coordinators will be in touch within one business day.</p>
+    </div>
+    <div style="padding:1.5rem 2.5rem 2.5rem;">
+      <?php echo do_shortcode('[wpforms id="REFERRAL_FORM_ID"]'); ?>
     </div>
   </div>
 </div>
@@ -467,5 +454,6 @@ function handleEnquiry(e){
   setInterval(function(){slides[cur].classList.remove('active');cur=(cur+1)%slides.length;slides[cur].classList.add('active');},4000);
 })();
 </script>
+<?php wp_footer(); ?>
 </body>
 </html>
