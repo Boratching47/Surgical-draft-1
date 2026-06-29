@@ -66,11 +66,11 @@ img{max-width:100%;display:block;}
 .site-header{position:sticky!important;top:0!important;z-index:9999!important;background:rgba(10,23,51,.92)!important;backdrop-filter:blur(10px)!important;padding:0!important;transition:background .25s ease!important;}
 .site-header.shrink .nav{height:60px!important;}
 .site-header.shrink{background:rgba(10,23,51,.97)!important;box-shadow:0 2px 20px rgba(0,0,0,.25)!important;}
-.nav{display:flex!important;align-items:center!important;justify-content:space-between!important;height:90px!important;}
-.brand{display:flex!important;align-items:center!important;gap:.7rem!important;color:#fff!important;font-family:var(--display)!important;font-weight:800!important;font-size:1.5rem!important;letter-spacing:-.01em!important;text-decoration:none!important;}
-.brand__mark{width:52px!important;height:52px!important;flex:none!important;object-fit:contain!important;}
+.nav{display:flex!important;align-items:center!important;justify-content:space-between!important;height:65px!important;}
+.brand{display:flex!important;align-items:center!important;gap:.7rem!important;color:#fff!important;font-family:var(--display)!important;font-weight:800!important;font-size:1.2rem!important;letter-spacing:-.01em!important;text-decoration:none!important;}
+.brand__mark{width:38px!important;height:38px!important;flex:none!important;object-fit:contain!important;}
 .nav__links{display:flex!important;align-items:center!important;gap:2.5rem!important;list-style:none!important;margin:0!important;padding:0!important;}
-.nav__links a{color:#dbe4f3!important;font-family:var(--display)!important;font-weight:500!important;font-size:1.1rem!important;text-decoration:none!important;}
+.nav__links a{color:#dbe4f3!important;font-family:var(--display)!important;font-weight:500!important;font-size:1.25rem!important;text-decoration:none!important;}
 .nav__links a:hover{color:#fff!important;}
 .nav__right{display:flex!important;align-items:center!important;gap:1rem!important;}
 .nav__toggle{display:none!important;background:none!important;border:0!important;cursor:pointer!important;padding:8px!important;}
