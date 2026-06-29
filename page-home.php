@@ -301,7 +301,7 @@ img{max-width:100%;display:block;}
 <section class="section section--alt" id="about">
   <div class="container split reveal">
     <div class="split__media">
-      <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="The Surgical Group">
+      <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-50.jpg" alt="The Surgical Group">
     </div>
     <div>
       <div class="eyebrow">About us</div>
@@ -419,15 +419,15 @@ img{max-width:100%;display:block;}
     </div>
     <div class="blog-grid reveal">
       <article class="blog-card">
-        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cc-4.jpg" alt="When to see a colorectal specialist"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CBUGS-6.jpg" alt="When to see a colorectal specialist"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Colorectal</span><h3><a href="#">When Should You See a Colorectal Specialist?</a></h3><p>Many people put off seeing a specialist about bowel symptoms. Here is what to look out for and when it is time to book an appointment.</p><span class="blog-card__date">June 2026</span></div>
       </article>
       <article class="blog-card">
-        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="Bariatric surgery guide"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-16.jpg" alt="Bariatric surgery guide"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Bariatric</span><h3><a href="#">Your Guide to Bariatric Surgery in Christchurch</a></h3><p>Thinking about weight loss surgery? Our specialists walk you through the options, what recovery looks like and the long term results.</p><span class="blog-card__date">May 2026</span></div>
       </article>
       <article class="blog-card">
-        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-clinical.jpg" alt="Self referral guide"></div>
+        <div class="blog-card__img"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CBUGS-17-1-1.jpg" alt="Self referral guide"></div>
         <div class="blog-card__body"><span class="blog-card__tag">Patient Guide</span><h3><a href="#">How to Self Refer: What Happens After You Submit?</a></h3><p>You do not always need a GP to see one of our specialists. Here is how the self referral process works and what to expect next.</p><span class="blog-card__date">April 2026</span></div>
       </article>
     </div>
