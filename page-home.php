@@ -2,6 +2,31 @@
 /*
 Template Name: Home Page Template
 */
+
+// Handle Enquiry Form
+$enquiry_sent = false;
+if (isset($_POST['tsg_enquiry'])) {
+  $name  = sanitize_text_field($_POST['eq_name'] ?? '');
+  $email = sanitize_email($_POST['eq_email'] ?? '');
+  $phone = sanitize_text_field($_POST['eq_phone'] ?? '');
+  $time  = sanitize_text_field($_POST['eq_time'] ?? '');
+  $body  = "New Enquiry\n\nName: $name\nEmail: $email\nPhone: $phone\nPreferred time: $time";
+  wp_mail('info@surgicalgroup.co.nz', 'New Enquiry – The Surgical Group', $body);
+  $enquiry_sent = true;
+}
+
+// Handle Self Referral Form
+$referral_sent = false;
+if (isset($_POST['tsg_referral'])) {
+  $fields = ['rf_first','rf_last','rf_dob','rf_phone','rf_email','rf_contact_pref','rf_reason','rf_gp','rf_seen_before'];
+  $lines = [];
+  foreach ($fields as $f) {
+    $lines[] = ucwords(str_replace('_',' ',substr($f,3))) . ': ' . sanitize_text_field($_POST[$f] ?? '');
+  }
+  $body = "New Self Referral\n\n" . implode("\n", $lines);
+  wp_mail('info@surgicalgroup.co.nz', 'New Self Referral – The Surgical Group', $body);
+  $referral_sent = true;
+}
 ?><!doctype html>
 <html lang="en-NZ">
 <head>
@@ -41,11 +66,11 @@ img{max-width:100%;display:block;}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(10,23,51,.92);backdrop-filter:blur(10px);padding-bottom:10px;transition:height .25s ease,background .25s ease;}
 .site-header.shrink .nav{height:60px;}
 .site-header.shrink{background:rgba(10,23,51,.97);box-shadow:0 2px 20px rgba(0,0,0,.25);}
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
-.brand{display:flex;align-items:center;gap:.6rem;color:#fff;font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:-.01em;}
-.brand__mark{width:42px;height:42px;flex:none;object-fit:contain;}
-.nav__links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0;}
-.nav__links a{color:#dbe4f3;font-family:var(--display);font-weight:500;font-size:.95rem;}
+.nav{display:flex;align-items:center;justify-content:space-between;height:90px;}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff;font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:-.01em;}
+.brand__mark{width:52px;height:52px;flex:none;object-fit:contain;}
+.nav__links{display:flex;align-items:center;gap:2.5rem;list-style:none;margin:0;padding:0;}
+.nav__links a{color:#dbe4f3;font-family:var(--display);font-weight:500;font-size:1.1rem;}
 .nav__links a:hover{color:#fff;}
 .nav__right{display:flex;align-items:center;gap:1rem;}
 .nav__toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
@@ -189,11 +214,9 @@ img{max-width:100%;display:block;}
 
 <section class="hero">
   <div class="hero__bg" id="hero-bg">
-    <img class="hero-slide active" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal.jpg" alt="">
-    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-clinical.jpg" alt="">
+    <img class="hero-slide active" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal.jpg" alt="">
     <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="">
-    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cc-4.jpg" alt="">
-    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="">
   </div>
   <div class="container">
     <div class="hero__inner">
@@ -392,7 +415,7 @@ img{max-width:100%;display:block;}
       </div>
       <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a></div>
       <div><h5>Practice</h5><a href="#">About Us</a><a href="#specialists">Our Specialists</a><a href="#blog">Blog</a></div>
-      <div><h5>Contact</h5><a href="https://docs.google.com/forms/d/e/1FAIpQLScNj9e_nMqsdYuTmP872JaveLH36FamTQNBpiheUnb_NgB0-Q/viewform?usp=publish-editor" target="_blank" rel="noopener">Self Referral</a><a href="tel:0396833140">03 968 3140</a><a href="#location">Find Us</a></div>
+      <div><h5>Contact</h5><a href="#" onclick="document.getElementById('referral-modal').classList.add('open');return false;">Self Referral</a><a href="tel:0396833140">03 968 3140</a><a href="#location">Find Us</a></div>
     </div>
     <div class="footer__bar">
       <span>&copy; 2026 The Surgical Group. All rights reserved.</span>
@@ -402,7 +425,7 @@ img{max-width:100%;display:block;}
 </footer>
 
 <!-- ENQUIRY MODAL -->
-<div id="enquiry-modal" class="modal" onclick="if(event.target===this)this.classList.remove('open')">
+<div id="enquiry-modal" class="modal<?php echo $enquiry_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal__box">
     <button class="modal__close" onclick="document.getElementById('enquiry-modal').classList.remove('open')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -412,14 +435,45 @@ img{max-width:100%;display:block;}
       <h2>Make An Enquiry</h2>
       <p>Fill in your details and a member of our team will be in touch with you shortly.</p>
     </div>
-    <div style="padding:1.5rem 2.5rem 2.5rem;">
-      <?php echo do_shortcode('[wpforms id="ENQUIRY_FORM_ID"]'); ?>
+    <?php if ($enquiry_sent): ?>
+    <div class="referral-success" style="display:flex">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+      <h3>Thanks!</h3>
+      <p>A member of our team will be in touch with you shortly.</p>
+      <button class="btn btn--outline" onclick="document.getElementById('enquiry-modal').classList.remove('open')">Close</button>
     </div>
+    <?php else: ?>
+    <form class="referral-form" method="post" action="<?php echo esc_url(get_permalink()); ?>#enquiry-modal">
+      <input type="hidden" name="tsg_enquiry" value="1">
+      <div class="form-group form-group--full">
+        <label for="eq-name">Full Name <span>*</span></label>
+        <input type="text" id="eq-name" name="eq_name" required placeholder="Jane Smith">
+      </div>
+      <div class="form-group form-group--full">
+        <label for="eq-email">Email <span>*</span></label>
+        <input type="email" id="eq-email" name="eq_email" required placeholder="jane@example.com">
+      </div>
+      <div class="form-group form-group--full">
+        <label for="eq-phone">Phone Number <span>*</span></label>
+        <input type="tel" id="eq-phone" name="eq_phone" required placeholder="021 000 0000">
+      </div>
+      <div class="form-group form-group--full">
+        <label for="eq-time">When would you like to schedule your appointment? <span>*</span></label>
+        <input type="text" id="eq-time" name="eq_time" required placeholder="e.g. Weekday mornings, ASAP, early July…">
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary btn--full">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Submit Enquiry
+        </button>
+      </div>
+    </form>
+    <?php endif; ?>
   </div>
 </div>
 
 <!-- SELF REFERRAL MODAL -->
-<div id="referral-modal" class="modal" onclick="if(event.target===this)this.classList.remove('open')">
+<div id="referral-modal" class="modal<?php echo $referral_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal__box">
     <button class="modal__close" onclick="document.getElementById('referral-modal').classList.remove('open')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
@@ -429,9 +483,86 @@ img{max-width:100%;display:block;}
       <h2>Refer yourself to our team</h2>
       <p>Fill in this form and one of our coordinators will be in touch within one business day.</p>
     </div>
-    <div style="padding:1.5rem 2.5rem 2.5rem;">
-      <?php echo do_shortcode('[wpforms id="REFERRAL_FORM_ID"]'); ?>
+    <?php if ($referral_sent): ?>
+    <div class="referral-success" style="display:flex">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
+      <h3>Thanks!</h3>
+      <p>A member of our team will be in touch with you shortly.</p>
+      <button class="btn btn--outline" onclick="document.getElementById('referral-modal').classList.remove('open')">Close</button>
     </div>
+    <?php else: ?>
+    <form class="referral-form" method="post" action="<?php echo esc_url(get_permalink()); ?>#referral-modal">
+      <input type="hidden" name="tsg_referral" value="1">
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-first">First name <span>*</span></label>
+            <input type="text" id="rf-first" name="rf_first" required placeholder="Jane">
+          </div>
+          <div class="form-group">
+            <label for="rf-last">Last name <span>*</span></label>
+            <input type="text" id="rf-last" name="rf_last" required placeholder="Smith">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-dob">Date of birth <span>*</span></label>
+            <input type="date" id="rf-dob" name="rf_dob" required>
+          </div>
+          <div class="form-group">
+            <label for="rf-phone">Phone number <span>*</span></label>
+            <input type="tel" id="rf-phone" name="rf_phone" required placeholder="021 000 0000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-email">Email</label>
+            <input type="email" id="rf-email" name="rf_email" placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="rf-nhi">NHI (if known)</label>
+            <input type="text" id="rf-nhi" name="rf_nhi" placeholder="ABC1234">
+          </div>
+        </div>
+        <div class="form-group form-group--full">
+          <label>How would you prefer to be contacted? <span>*</span></label>
+          <div style="display:flex;gap:1.5rem;margin-top:.4rem;">
+            <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;"><input type="radio" name="rf_contact_pref" value="Phone" required> Phone</label>
+            <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;"><input type="radio" name="rf_contact_pref" value="Email"> Email</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Referral details</legend>
+        <div class="form-group form-group--full">
+          <label for="rf-reason">Reason for referral <span>*</span></label>
+          <textarea id="rf-reason" name="rf_reason" required rows="4" placeholder="Please describe your medical issue or reason for referral…"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rf-gp">GP Name / Practice</label>
+            <input type="text" id="rf-gp" name="rf_gp" placeholder="Dr Name, Example Medical Centre">
+          </div>
+          <div class="form-group">
+            <label>Have you seen a specialist before?</label>
+            <div style="display:flex;gap:1rem;margin-top:.4rem;flex-wrap:wrap;">
+              <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;"><input type="radio" name="rf_seen_before" value="Yes"> Yes</label>
+              <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;"><input type="radio" name="rf_seen_before" value="No"> No</label>
+              <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;"><input type="radio" name="rf_seen_before" value="Unsure"> Unsure</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <button type="submit" class="btn btn--primary btn--full">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Submit Referral
+        </button>
+        <p class="form-note">For urgent concerns please call <a href="tel:0396833140">03 968 3140</a> or in an emergency dial 111.</p>
+      </div>
+    </form>
+    <?php endif; ?>
   </div>
 </div>
 
