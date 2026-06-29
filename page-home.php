@@ -240,9 +240,11 @@ img{max-width:100%;display:block;}
 
 <section class="hero">
   <div class="hero__bg" id="hero-bg">
-    <img class="hero-slide active" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="">
-    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal.jpg" alt="">
-    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/cbuggs-bariatric.jpg" alt="">
+    <img class="hero-slide active" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/exterior.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-9-1.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-29.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-52.jpg" alt="">
+    <img class="hero-slide" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-7.jpg" alt="">
   </div>
   <div class="container">
     <div class="hero__inner">
