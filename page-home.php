@@ -172,6 +172,14 @@ img{max-width:100%;display:block;}
 .lead{color:var(--slate);font-size:1.05rem;}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease;}
 .reveal.in{opacity:1;transform:none;}
+.tsg-modal{display:none!important;position:fixed!important;inset:0!important;z-index:99999!important;background:rgba(10,23,51,.7)!important;align-items:flex-start!important;justify-content:center!important;padding:2rem 1rem!important;overflow-y:auto!important;}
+.tsg-modal.open{display:flex!important;}
+.tsg-modal__box{background:#fff!important;border-radius:24px!important;width:100%!important;max-width:720px!important;position:relative!important;margin:auto!important;padding-bottom:2rem!important;}
+.tsg-modal__close{position:absolute!important;top:1.2rem!important;right:1.2rem!important;background:#f4f8fd!important;border:0!important;cursor:pointer!important;border-radius:50%!important;width:36px!important;height:36px!important;display:flex!important;align-items:center!important;justify-content:center!important;z-index:2!important;}
+.tsg-modal__header{padding:2.5rem 2.5rem 1.5rem!important;border-bottom:1px solid #e6ecf3!important;}
+.tsg-modal__header h2{font-size:1.6rem!important;margin-bottom:.35rem!important;color:#16223a!important;}
+.tsg-modal__header p{color:#5b6677!important;font-size:.97rem!important;margin:0!important;}
+.tsg-modal__body{padding:1.5rem 2.5rem 0!important;}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
 @media(max-width:1024px){.cards--4{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:880px){
@@ -425,16 +433,17 @@ img{max-width:100%;display:block;}
 </footer>
 
 <!-- ENQUIRY MODAL -->
-<div id="enquiry-modal" class="modal<?php echo $enquiry_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="modal__box">
-    <button class="modal__close" onclick="document.getElementById('enquiry-modal').classList.remove('open')" aria-label="Close">
+<div id="enquiry-modal" class="tsg-modal<?php echo $enquiry_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="tsg-modal__box">
+    <button class="tsg-modal__close" onclick="document.getElementById('enquiry-modal').classList.remove('open')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <div class="modal__header">
+    <div class="tsg-modal__header">
       <div class="eyebrow">Get in touch</div>
       <h2>Make An Enquiry</h2>
       <p>Fill in your details and a member of our team will be in touch with you shortly.</p>
     </div>
+    <div class="tsg-modal__body">
     <?php if ($enquiry_sent): ?>
     <div class="referral-success" style="display:flex">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
@@ -469,20 +478,22 @@ img{max-width:100%;display:block;}
       </div>
     </form>
     <?php endif; ?>
+    </div>
   </div>
 </div>
 
 <!-- SELF REFERRAL MODAL -->
-<div id="referral-modal" class="modal<?php echo $referral_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
-  <div class="modal__box">
-    <button class="modal__close" onclick="document.getElementById('referral-modal').classList.remove('open')" aria-label="Close">
+<div id="referral-modal" class="tsg-modal<?php echo $referral_sent ? ' open' : ''; ?>" onclick="if(event.target===this)this.classList.remove('open')">
+  <div class="tsg-modal__box">
+    <button class="tsg-modal__close" onclick="document.getElementById('referral-modal').classList.remove('open')" aria-label="Close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
-    <div class="modal__header">
+    <div class="tsg-modal__header">
       <div class="eyebrow">Self Referral</div>
       <h2>Refer yourself to our team</h2>
       <p>Fill in this form and one of our coordinators will be in touch within one business day.</p>
     </div>
+    <div class="tsg-modal__body">
     <?php if ($referral_sent): ?>
     <div class="referral-success" style="display:flex">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="56" height="56"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
@@ -563,6 +574,7 @@ img{max-width:100%;display:block;}
       </div>
     </form>
     <?php endif; ?>
+    </div>
   </div>
 </div>
 
