@@ -230,7 +230,7 @@ img{max-width:100%;display:block;}
       <li><a href="#specialists">Our Specialists</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#location">Contact</a></li>
     </ul>
     <div class="nav__right">
       <button class="nav__toggle" aria-label="Menu" onclick="document.querySelector('.nav__links').style.display='flex'"><span></span><span></span><span></span></button>
@@ -386,7 +386,7 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<section class="section section--alt" id="location">
+<section class="section section--alt" id="location" style="scroll-margin-top:70px">
   <div class="container">
     <div class="location-block reveal">
       <div class="location-block__img">
