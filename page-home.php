@@ -390,7 +390,7 @@ img{max-width:100%;display:block;}
   <div class="container">
     <div class="location-block reveal">
       <div class="location-block__img">
-        <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/building.jpg" alt="Specialist Centre, 21 Caledonian Road">
+        <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/exterior.jpg" alt="Specialist Centre, 21 Caledonian Road">
       </div>
       <div class="location-block__info">
         <div class="eyebrow">Find us</div>
