@@ -301,7 +301,7 @@ img{max-width:100%;display:block;}
 <section class="section section--alt" id="about">
   <div class="container split reveal">
     <div class="split__media">
-      <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-50.jpg" alt="The Surgical Group">
+      <img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/exterior.jpg" alt="The Surgical Group">
     </div>
     <div>
       <div class="eyebrow">About us</div>
