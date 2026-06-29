@@ -197,7 +197,25 @@ img{max-width:100%;display:block;}
   .cta-band{padding:2.2rem 1.5rem;}
   .hero__cta{flex-direction:column;align-items:stretch;}
   .btn{justify-content:center;}
+  .form-row{grid-template-columns:1fr!important;}
 }
+.referral-form{padding:0!important;}
+.referral-form fieldset{border:0!important;padding:0!important;margin:0 0 1.2rem!important;}
+.referral-form legend{font-family:var(--display)!important;font-weight:700!important;font-size:.8rem!important;letter-spacing:.1em!important;text-transform:uppercase!important;color:var(--blue)!important;margin-bottom:.8rem!important;padding:0!important;display:block!important;}
+.form-row{display:grid!important;grid-template-columns:1fr 1fr!important;gap:1rem!important;}
+.form-group{display:flex!important;flex-direction:column!important;gap:.3rem!important;margin-bottom:.75rem!important;}
+.form-group--full{grid-column:1/-1!important;}
+.form-group label{font-family:var(--display)!important;font-weight:600!important;font-size:.88rem!important;color:var(--ink)!important;display:block!important;margin:0 0 .3rem!important;padding:0!important;}
+.form-group label span{color:#e03!important;}
+.form-group input,.form-group select,.form-group textarea{font-family:var(--body)!important;font-size:.95rem!important;color:var(--ink)!important;border:1.5px solid #e6ecf3!important;border-radius:10px!important;padding:.7rem 1rem!important;background:#fff!important;width:100%!important;box-sizing:border-box!important;display:block!important;margin:0!important;line-height:1.5!important;}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue)!important;outline:none!important;}
+.form-group textarea{resize:vertical!important;min-height:100px!important;}
+.form-actions{margin-top:1.5rem!important;border-top:1px solid #e6ecf3!important;padding-top:1.5rem!important;}
+.form-note{font-size:.83rem!important;color:var(--slate)!important;margin-top:.8rem!important;text-align:center!important;}
+.referral-success{display:flex;flex-direction:column;align-items:center;text-align:center;padding:2rem;gap:1rem;color:var(--ink);}
+.referral-success svg{color:var(--blue);}
+.referral-success h3{font-size:1.4rem;margin:0;}
+.referral-success p{color:var(--slate);margin:0;}
 </style>
 </head>
 <body>
