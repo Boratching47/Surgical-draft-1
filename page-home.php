@@ -296,6 +296,10 @@ img{max-width:100%;display:block;}
         <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/ccg-colorectal-2.jpg" alt="Gynaecologic Oncology"></div>
         <div class="card__body"><h3>Gynaecologic Oncology</h3><p>We provide expert oncology treatment for cancers of the female reproductive system, including cervix, uterus, ovaries and vulva.</p></div>
       </article>
+      <article class="card card--img">
+        <div class="card__img-wrap"><img src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/CCG-9-1.jpg" alt="Endoscopy"></div>
+        <div class="card__body"><h3>Endoscopy</h3><p>Diagnostic and therapeutic endoscopy procedures including colonoscopy and gastroscopy, performed by our specialist team at Southern Endoscopy Centre.</p></div>
+      </article>
     </div>
   </div>
 </section>
@@ -444,7 +448,7 @@ img{max-width:100%;display:block;}
         <span class="brand"><img class="brand__mark" src="https://thesurgicalgroup.co.nz/wp-content/uploads/2026/06/tsg-logo-white.png" alt="The Surgical Group">The Surgical Group</span>
         <p>Specialist surgical care in central Christchurch.</p>
       </div>
-      <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a></div>
+      <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a><a href="#">Endoscopy</a></div>
       <div><h5>Practice</h5><a href="#">About Us</a><a href="#specialists">Our Specialists</a><a href="#blog">Blog</a></div>
       <div><h5>Contact</h5><a href="#" onclick="document.getElementById('referral-modal').classList.add('open');return false;">Self Referral</a><a href="tel:+6496833140">03 968 3140</a><a href="#location">Find Us</a></div>
     </div>
