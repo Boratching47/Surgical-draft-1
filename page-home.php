@@ -11,7 +11,9 @@ if (isset($_POST['tsg_enquiry'])) {
   $phone = sanitize_text_field($_POST['eq_phone'] ?? '');
   $time  = sanitize_text_field($_POST['eq_time'] ?? '');
   $body  = "New Enquiry\n\nName: $name\nEmail: $email\nPhone: $phone\nPreferred time: $time";
-  wp_mail('info@surgicalgroup.co.nz', 'New Enquiry – The Surgical Group', $body);
+  $enquiry = sanitize_text_field($_POST['eq_enquiry'] ?? '');
+  $body  = "New Enquiry\n\nName: $name\nEmail: $email\nPhone: $phone\nEnquiry: $enquiry\nPreferred time: $time";
+  wp_mail('info@christchurchcolorectal.co.nz', 'New Enquiry – The Surgical Group', $body);
   $enquiry_sent = true;
 }
 
@@ -24,7 +26,7 @@ if (isset($_POST['tsg_referral'])) {
     $lines[] = ucwords(str_replace('_',' ',substr($f,3))) . ': ' . sanitize_text_field($_POST[$f] ?? '');
   }
   $body = "New Self Referral\n\n" . implode("\n", $lines);
-  wp_mail('info@surgicalgroup.co.nz', 'New Self Referral – The Surgical Group', $body);
+  wp_mail('info@christchurchcolorectal.co.nz', 'New Self Referral – The Surgical Group', $body);
   $referral_sent = true;
 }
 ?><!doctype html>
@@ -340,7 +342,8 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<section class="section section--alt" id="reviews">
+<!-- reviews section removed -->
+<section class="section section--alt" id="reviews" style="display:none">
   <div class="container">
     <div class="section__head reveal">
       <div class="eyebrow">Patient reviews</div>
@@ -398,8 +401,8 @@ img{max-width:100%;display:block;}
         <hr class="location-rule">
         <ul class="location-list">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><div>Specialist Centre, Level 2<br>21 Caledonian Road, Saint Albans<br>Christchurch 8014</div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div>Ph: <a href="tel:0396833140">03 968 3140</a></div></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div>Email: <a href="mailto:info@surgicalgroup.co.nz">info@surgicalgroup.co.nz</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><div>Ph: <a href="tel:+6496833140">03 968 3140</a></div></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div>Email: <a href="mailto:info@christchurchcolorectal.co.nz">info@christchurchcolorectal.co.nz</a></div></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div>Opening Hours<br>8am to 5pm Monday to Friday</div></li>
         </ul>
         <div class="location-map">
@@ -410,7 +413,7 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<section class="section" id="blog">
+<section class="section" id="blog" style="display:none">
   <div class="container">
     <div class="section__head reveal">
       <div class="eyebrow">Latest articles</div>
@@ -443,7 +446,7 @@ img{max-width:100%;display:block;}
       </div>
       <div><h5>Care</h5><a href="#">Colorectal Surgery</a><a href="#">Bariatric Surgery</a><a href="#">Upper GI &amp; General Surgery</a><a href="#">Gynaecologic Oncology</a></div>
       <div><h5>Practice</h5><a href="#">About Us</a><a href="#specialists">Our Specialists</a><a href="#blog">Blog</a></div>
-      <div><h5>Contact</h5><a href="#" onclick="document.getElementById('referral-modal').classList.add('open');return false;">Self Referral</a><a href="tel:0396833140">03 968 3140</a><a href="#location">Find Us</a></div>
+      <div><h5>Contact</h5><a href="#" onclick="document.getElementById('referral-modal').classList.add('open');return false;">Self Referral</a><a href="tel:+6496833140">03 968 3140</a><a href="#location">Find Us</a></div>
     </div>
     <div class="footer__bar">
       <span>&copy; 2026 The Surgical Group. All rights reserved.</span>
@@ -487,8 +490,12 @@ img{max-width:100%;display:block;}
         <input type="tel" id="eq-phone" name="eq_phone" required placeholder="021 000 0000">
       </div>
       <div class="form-group form-group--full">
-        <label for="eq-time">When would you like to schedule your appointment? <span>*</span></label>
-        <input type="text" id="eq-time" name="eq_time" required placeholder="e.g. Weekday mornings, ASAP, early July…">
+        <label for="eq-enquiry">What is your enquiry? <span>*</span></label>
+        <textarea id="eq-enquiry" name="eq_enquiry" required placeholder="Please briefly describe what you need help with…" rows="3"></textarea>
+      </div>
+      <div class="form-group form-group--full">
+        <label for="eq-time">Preferred appointment time</label>
+        <input type="text" id="eq-time" name="eq_time" placeholder="e.g. Weekday mornings, ASAP, early July…">
       </div>
       <div class="form-actions">
         <button type="submit" class="btn btn--primary btn--full">
@@ -590,7 +597,7 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
           Submit Referral
         </button>
-        <p class="form-note">For urgent concerns please call <a href="tel:0396833140">03 968 3140</a> or in an emergency dial 111.</p>
+        <p class="form-note">For urgent concerns please call <a href="tel:+6496833140">03 968 3140</a> or in an emergency dial 111.</p>
       </div>
     </form>
     <?php endif; ?>
